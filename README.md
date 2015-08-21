@@ -4,7 +4,7 @@ Demo shows Navigation With URI
 #Introduction
 导航到第三方应用，如：高德，百度，谷歌地图等。
 
-![intro gif](a href="https://github.com/sauchye/DemoNavigationURI/blob/master/intro.gif")
+![intro gif](https://github.com/sauchye/DemoNavigationURI/blob/master/into.gif)
 
 # Support
 iOS 7+，增加对iOS7支持。
