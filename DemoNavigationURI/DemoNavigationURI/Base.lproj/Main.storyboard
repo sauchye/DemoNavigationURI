@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uo-B1-gjl">
+                                <rect key="frame" x="20" y="113" width="560" height="35"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="GE2-OM-8im"/>
+                                </constraints>
+                                <state key="normal" title="iOS7ActionSheet">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iOS7ActionSheetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0R-Do-EcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE0-NP-gkL">
+                                <rect key="frame" x="20" y="161" width="560" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="iOS8 ActionSheet">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iOS8ActionSheetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUF-Wy-Uqq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="导航到第三方应用如，高德，百度,谷歌等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qo-ax-hJs">
+                                <rect key="frame" x="20" y="67" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fE0-NP-gkL" firstAttribute="leading" secondItem="4uo-B1-gjl" secondAttribute="leading" id="1vm-sQ-j7q"/>
+                            <constraint firstItem="4uo-B1-gjl" firstAttribute="top" secondItem="8qo-ax-hJs" secondAttribute="bottom" constant="25" id="IjE-Gm-p8f"/>
+                            <constraint firstItem="8qo-ax-hJs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="KbC-NH-PGH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8qo-ax-hJs" secondAttribute="trailing" constant="4" id="bVp-vj-Dgz"/>
+                            <constraint firstItem="fE0-NP-gkL" firstAttribute="trailing" secondItem="4uo-B1-gjl" secondAttribute="trailing" id="eJy-eb-e4q"/>
+                            <constraint firstItem="8qo-ax-hJs" firstAttribute="width" secondItem="4uo-B1-gjl" secondAttribute="width" id="eLo-MN-Plj"/>
+                            <constraint firstItem="fE0-NP-gkL" firstAttribute="width" secondItem="4uo-B1-gjl" secondAttribute="width" id="fXR-oS-Z8N"/>
+                            <constraint firstItem="fE0-NP-gkL" firstAttribute="top" secondItem="4uo-B1-gjl" secondAttribute="bottom" constant="13" id="myk-GJ-TVE"/>
+                            <constraint firstItem="8qo-ax-hJs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="nCl-7h-QDD"/>
+                            <constraint firstItem="8qo-ax-hJs" firstAttribute="leading" secondItem="4uo-B1-gjl" secondAttribute="leading" id="szh-to-A8d"/>
+                            <constraint firstItem="fE0-NP-gkL" firstAttribute="height" secondItem="4uo-B1-gjl" secondAttribute="height" id="teC-oB-3yn"/>
+                            <constraint firstItem="8qo-ax-hJs" firstAttribute="trailing" secondItem="4uo-B1-gjl" secondAttribute="trailing" id="xxj-3u-IzN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="358" y="359"/>
         </scene>
     </scenes>
 </document>

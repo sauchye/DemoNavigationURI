@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02122B001B86FD6A00D07AE0 /* SYPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02122AFF1B86FD6A00D07AE0 /* SYPopView.m */; };
 		ED6FB8E21B79F46900F6A9D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6FB8E11B79F46900F6A9D8 /* main.m */; };
 		ED6FB8E51B79F46900F6A9D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6FB8E41B79F46900F6A9D8 /* AppDelegate.m */; };
 		ED6FB8E81B79F46900F6A9D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6FB8E71B79F46900F6A9D8 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02122AFE1B86FD6A00D07AE0 /* SYPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPopView.h; sourceTree = "<group>"; };
+		02122AFF1B86FD6A00D07AE0 /* SYPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPopView.m; sourceTree = "<group>"; };
 		ED6FB8DC1B79F46900F6A9D8 /* DemoNavigationURI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoNavigationURI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6FB8E01B79F46900F6A9D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6FB8E11B79F46900F6A9D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02122AFD1B86FD6A00D07AE0 /* SYPopView */ = {
+			isa = PBXGroup;
+			children = (
+				02122AFE1B86FD6A00D07AE0 /* SYPopView.h */,
+				02122AFF1B86FD6A00D07AE0 /* SYPopView.m */,
+			);
+			path = SYPopView;
+			sourceTree = "<group>";
+		};
 		ED6FB8D31B79F46900F6A9D8 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 		ED6FB8DE1B79F46900F6A9D8 /* DemoNavigationURI */ = {
 			isa = PBXGroup;
 			children = (
+				02122AFD1B86FD6A00D07AE0 /* SYPopView */,
 				ED6FB8E31B79F46900F6A9D8 /* AppDelegate.h */,
 				ED6FB8E41B79F46900F6A9D8 /* AppDelegate.m */,
 				ED6FB8E61B79F46900F6A9D8 /* ViewController.h */,
@@ -171,6 +184,7 @@
 		ED6FB8D41B79F46900F6A9D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SY;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = LJC;
 				TargetAttributes = {
@@ -227,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02122B001B86FD6A00D07AE0 /* SYPopView.m in Sources */,
 				ED6FB8E81B79F46900F6A9D8 /* ViewController.m in Sources */,
 				ED6FB8E51B79F46900F6A9D8 /* AppDelegate.m in Sources */,
 				ED6FB8E21B79F46900F6A9D8 /* main.m in Sources */,
@@ -358,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoNavigationURI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -368,6 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoNavigationURI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -426,6 +443,7 @@
 				ED6FB9011B79F46A00F6A9D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED6FB9021B79F46A00F6A9D8 /* Build configuration list for PBXNativeTarget "DemoNavigationURITests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +452,7 @@
 				ED6FB9041B79F46A00F6A9D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
