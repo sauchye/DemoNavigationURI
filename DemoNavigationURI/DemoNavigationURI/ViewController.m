@@ -33,14 +33,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
 
     self.urlScheme = @"demoURI://";
     self.appName = @"demoURI";
     self.coordinate = CLLocationCoordinate2DMake(22.560131849189876,113.95401330887923);
 }
 
-#pragma mark - 解决导航中到达终点 距离偏差很大
+#pragma mark - 解决导航中到达终点 距离偏差很大  火星转码
 - (CLLocationCoordinate2D)transformCoordinatesLatitude:(double)latitude longitude:(double)longitude{
     
     double x = longitude - 0.0065, y = latitude - 0.006;
@@ -69,8 +68,6 @@
             }
         }
     }
-    
-    //    [appListArr addObject:@"显示路线"];
     return appListArr;
 }
 
@@ -83,7 +80,7 @@ static const int  chooseNavigationViewTag = 111111;
     bgView.backgroundColor = [UIColor blackColor];
     _popView = [[SYPopView alloc] initWithFrame:CGRectMake(0, (SCREEN_HEIGHT-51*buttons.count-20-64)/2, SCREEN_WIDTH, 51 * buttons.count + 20) title:@"选择地图" buttonData:buttons];
     _popView.alpha = 1.0;
-    _popView.delegate = self;
+//    _popView.delegate = self;
     _popView.backgroundColor = [UIColor whiteColor];
     
     [UIView animateWithDuration:0.3 animations:^{
@@ -109,25 +106,25 @@ static const int  chooseNavigationViewTag = 111111;
         NSLog(@"%@",mapName);
         bgView.alpha = 1.0;
         [bgView removeFromSuperview];
-        //[mapName isEqualToString:@"苹果地图"]
+        
+        NSLog(@"%ld",(long)buttonIndex);
         if (buttonIndex == kButtonIndex) {
-            if ( [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://maps.apple.com/"]]){
+            if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://maps.apple.com/"]]){
                 
                 MKMapItem *userCurrentLocation = [MKMapItem mapItemForCurrentLocation];
                 MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:weakSelf.coordinate addressDictionary:nil]];
                 
                 [MKMapItem openMapsWithItems:@[userCurrentLocation, toLocation]
                                launchOptions:@{MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving,MKLaunchOptionsShowsTrafficKey: [NSNumber numberWithBool:YES]}];
-                
-                
+   
+                }
             }else if (buttonIndex == kButtonIndex+1){
                 
                 [weakSelf judgeIsInstallMapName:mapName urlScheme:weakSelf.urlScheme CLLocationCoordinate2D:weakSelf.coordinate];
             }else if (buttonIndex == kButtonIndex + 2){
                 
-//                [weakSelf judgeIsInstallMapName:mapName urlScheme:self.urlScheme CLLocationCoordinate2D:self.coordinate];
+                [weakSelf judgeIsInstallMapName:mapName urlScheme:weakSelf.urlScheme CLLocationCoordinate2D:weakSelf.coordinate];
             }
-        }
         
     };
 
@@ -139,6 +136,7 @@ static const int  chooseNavigationViewTag = 111111;
     [self hideAllNavigationView];
     if (tag == kButtonIndex) {
         if ( [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://maps.apple.com/"]]){
+            
             
             MKMapItem *userCurrentLocation = [MKMapItem mapItemForCurrentLocation];
             MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate:self.coordinate addressDictionary:nil]];

@@ -26,7 +26,7 @@
 /***  重写重新初始化*/
 - (id)initWithFrame:(CGRect)frame title:(NSString *)title buttonData:(NSArray *)buttons;
 
-/***  block回调  有点问题 请使用代理实现*/
+/***  block回调  默认使用此方法*/
 @property (nonatomic, copy) void(^buttonClickIndexBlock)(NSInteger buttonIndex, NSString *mapName);
 
 @end

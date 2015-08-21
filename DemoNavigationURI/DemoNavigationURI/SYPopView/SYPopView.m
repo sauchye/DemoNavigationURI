@@ -66,13 +66,13 @@
     
     NSLog(@"%ld",sender.tag);
     [self tapRemoveView];
-    //    if (_buttonClickIndexBlock) {
-    //        _buttonClickIndexBlock(sender.tag, _btnData[sender.tag - kButtonIndex]);
-    //    }
+        if (_buttonClickIndexBlock) {
+            _buttonClickIndexBlock(sender.tag, _btnData[sender.tag - kButtonIndex]);
+        }
 
-    if (_delegate) {
-        [_delegate mapButtonClickTag:sender.tag mapType:_btnData[sender.tag-kButtonIndex]];
-    }
+//    if (_delegate) {
+//        [_delegate mapButtonClickTag:sender.tag mapType:_btnData[sender.tag-kButtonIndex]];
+//    }
     
     
 }

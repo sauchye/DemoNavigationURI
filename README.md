@@ -9,9 +9,6 @@ Demo shows Navigation With URI
 # Support
 iOS 7+，增加对iOS7支持。
 
-#issues
-iOS 7下Block回调出现问题，换成delegate。
-
 #Contributors
 Thanks:<a href="https://github.com/adad184">adad184</a>
 #License
